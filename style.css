@@ -1,0 +1,737 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root {
+    --col-one:rgb(0, 57, 38);
+    --col-two:rgb(252, 125, 56);
+    --col-thr:rgb(254, 219, 119);
+    --col-fou:rgb(254, 248, 236);
+}
+
+li a {
+    color: var(--col-fou);
+}
+li a:hover {
+    scale: 105%;
+    color: var(--col-thr);
+}
+
+button a {
+    padding: 15px 25px;
+    background-color: var(--col-fou);
+    border: none;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    color: var(--col-one);
+    transition: .2s ease-in-out;
+}
+button a:hover {
+    background-color: var(--col-thr);
+    scale: 105%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-image: url(assets/double-bubble-outline.webp);
+    min-height: 100vh;
+    /* min-width: 100hw; */
+    /* max-width: fit-content;
+    max-height: fit-content; */
+}
+
+.humberger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--col-one);
+    color: var(--col-fou);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    height: auto;
+    width: 100%;
+    border-bottom: 3px solid var(--col-two);
+    z-index: 5;
+}
+
+.navbar h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+.menu li {
+    list-style-type: none;
+    font-size: larger;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.menu li:hover {
+    scale: 107%;
+    color: var(--col-thr);
+}
+
+.home {
+    background-color: var(--col-one);
+    min-height: 630px;
+    max-height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+}
+.home img {
+    /* margin: auto 40px; */
+    position: absolute;
+    height: 630px;
+    right: 0;
+    width: auto;
+    mask-image: url(assets/aaset2-01.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: top;;
+}
+
+.texthome {
+    /* background-color:blueviolet; */
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    width: 50%;
+    margin-left: 40px;
+    z-index: 1;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .9);
+}
+.sustainable {
+    color: var(--col-thr);
+    font-size: 50px;
+}
+.agriculture {
+    color: var(--col-fou);
+    font-size: 80px;
+}
+.for {
+    color: var(--col-thr);
+    font-size: 30px;
+}
+.better {
+    color: var(--col-fou);
+    font-size: 60px;
+}
+
+.getstarted {
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    margin-left: 10%;
+    margin-right: 90%;
+    background-color:var(--col-fou);
+    color: var(--col-one);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .9);
+    animation: animasitombol .5s infinite alternate forwards;
+    transition: all .2s ease-in-out;
+}
+.getstarted:hover {
+    background-color: var(--col-thr);
+}
+
+.tombol2 {
+    height: 140px;
+    width: 85px;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid var(--col-two);
+    padding: 10px;
+    border-radius: 15px;
+    top: 650px;
+    left: 50vw;
+    cursor: pointer;
+}
+.tombol {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    top: 650px;
+    left: 50vw;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.tombol a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .tombol:hover {
+    scale: 103%;
+}
+.tombol p {
+    font-size: 40px;
+    color: var(--col-fou);
+}
+.tombol img {
+    filter: grayscale();
+    animation: animasitombol .5s infinite ;
+} */
+
+.profile {
+    height: fit-content;
+    margin: 50px;
+    margin-bottom: 100px;
+    color: var(--col-one);
+}
+.profile h1 {
+    padding: 30px 0;
+}
+
+.isiprofile {
+    display: flex;
+}
+
+.gambar {
+    height: 400px;
+    mask-image: url(assets/Asset\ 4.png);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: top;
+    z-index: 2;
+}
+.shadow {
+    height: 450px;
+    position: absolute;
+    top: 840px;
+    left: 27px;
+    opacity: 25%;
+    z-index: 1;
+}
+
+.deskripsi {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--col-th);
+    /* background-color: aqua; */
+}
+.deskripsi h2 {
+    margin: 10px 80px;
+}
+.deskripsi p {
+    margin-left: 80px;
+}
+.isideskripsi {
+    display: flex;
+}
+.block {
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 55px;
+    margin-top: 17px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--col-two);
+}
+.isideskripsi a {
+    margin-top: 90px;
+    margin-left: 80px;
+    padding: 5px 20px;
+    border: 3px solid var(--col-one);
+    background-color: rgba(0, 57, 38, 0.114);
+    border-radius: 5px;
+    color: var(--col-one);
+    z-index: 1;
+    transition: all .2s ease-in-out;
+}
+.isideskripsi a:hover {
+    scale: 105%;
+}
+
+.product {
+    height: 400px;
+    background-color: var(--col-fou);
+    height: fit-content;
+    padding: 50px;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, .5);
+    color: var(--col-one);
+}
+
+.footer {
+    height: 400px;
+    background-color: var(--col-one);
+}
+
+.isiproduct {
+    /* margin-top: 50px; */
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    /* background-color: yellow; */
+}
+.isiproduct .p {
+    background-color: var(--col-fou);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    width: 320px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+.p img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+.p div {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.p div h3 {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.p div h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--col-thr);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.p div h5:hover {
+    background-color: var(--col-two);
+    scale: 105%;
+    color: var(--col-fou);
+}
+.isiproduct .product4 {
+    margin-top: auto;
+    margin-bottom: auto;
+    /* padding: 20px; */
+    /* border: 5px solid var(--col-thr); */
+    background-color: var(--col-thr);
+    font-style:italic;
+    box-shadow: none;
+    transition: .2s ease-in-out;
+    /* cursor: pointer; */
+}
+.isiproduct .product4:hover {
+    scale: 105%;
+}
+.isiproduct .product4 a {
+    /* margin: 0; */
+    color: var(--col-one);
+    font-size: x-large;
+    padding: 20px;
+}
+
+.popup {
+    position: fixed;
+    height: 500px;
+    width: 700px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgb(254, 248, 236);
+    border-radius: 20px;
+    border: 5px solid var(--col-one);
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    color: var(--col-one);
+    display: none;
+}
+.popup.buka {
+    display: block;
+}
+.ptitle {
+    padding: 20px;
+    border-bottom: 5px solid var(--col-one);
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+}
+.x {
+    scale: 200%;
+    margin: 5px 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.x:hover {
+    scale: 220%;
+    font-weight: bold;
+}
+.desc {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.pdeskripsi {
+    padding: 20px;
+    font-size: large;
+}
+.pbeli {
+    margin: 20px;
+    padding: 15px 10px;
+    width: 100px;
+    font-size: large;
+    border-radius: 10px;
+    background-color: var(--col-thr);
+    border: none;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.pbeli:hover {
+    scale: 105%;
+    background-color: var(--col-two);
+}
+
+
+.contact {
+    background-color: var(--col-thr);
+    color: var(--col-one);
+    padding: 50px;
+}
+.contact h1 {
+    margin-bottom: 30px;
+}
+
+.sosmed {
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sosmed img {
+    height: 170px;
+    width: auto;
+    padding: 10px;
+    filter:grayscale();
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.sosmed img:hover {
+    filter: none;
+    scale: 105%;
+}
+
+.footer {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer h3 {
+    padding: 20px;
+    color: var(--col-thr);
+}
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        color: yellow;
+    }
+
+    .humberger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around ;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .humberger:hover {
+        .line {
+            background-color: var(--col-thr);
+        }
+    }
+
+    .line {
+        height: 5px;
+        width: 100%;
+        background-color: var(--col-fou);
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    .menu {
+        padding-bottom:0px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        gap: 20px;
+        position: absolute;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        background-color: var(--col-two);
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+    .menu.active {
+        width: 100%;
+        height: 260px;
+        background-color: var(--col-two);
+        padding-bottom: 20px;
+    }
+    .isiprofile {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .getstarted {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 576px) {
+    .navbar h1 {
+        color: red;
+    }
+
+    .humberger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around ;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .humberger:hover {
+        .line {
+            background-color: var(--col-thr);
+        }
+    }
+
+    .line {
+        height: 5px;
+        width: 100%;
+        background-color: var(--col-fou);
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    .menu {
+        padding-bottom:0px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        gap: 20px;
+        position: absolute;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        background-color: var(--col-two);
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+    .menu.active {
+        width: 100%;
+        height: 260px;
+        background-color: var(--col-two);
+        padding-bottom: 20px;
+    }
+    .sustainable {
+        color: var(--col-thr);
+        font-size: 40px;
+    }
+    .agriculture {
+        color: var(--col-fou);
+        font-size: 70px;
+    }
+    .for {
+        color: var(--col-thr);
+        font-size: 20px;
+    }
+    .better {
+        color: var(--col-fou);
+        font-size: 50px;
+    }
+    .isiproduct {
+        margin-left: 0px;
+    }
+    .sosmed img {
+        height: 100px;
+        width: auto;
+    }
+    .gambar {
+        height: 300px;
+    }
+    .shadow {
+        height: 340px;
+        top: 830px;
+        left: 30px;
+    }
+    
+    .deskripsi {
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--col-th);
+        /* background-color: aqua; */
+    }
+    .block {
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 0px;
+        margin-top: 17px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--col-two);
+    }
+    .deskripsi h2 {
+        margin: 10px 30px;
+    }
+    .deskripsi p {
+        margin-left: 30px;
+    }
+    .isideskripsi {
+        display: flex;
+    }
+    .isideskripsi a {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 80px;
+        padding: 5px 20px;
+        border: 3px solid var(--col-one);
+        background-color: rgba(0, 57, 38, 0.114);
+        border-radius: 5px;
+        color: var(--col-one);
+        z-index: 1;
+    }
+
+
+    .texthome {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+    }
+    .sustainable {
+        font-size: 30px;
+    }
+    .agriculture {
+        font-size: 50px;
+    }
+    .for {
+        font-size: 20px;
+    }
+    .better {
+        font-size: 40px;
+    }
+
+    .popup {
+        height: 510px;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgb(254, 248, 236);
+        border-radius: 20px;
+        border: 5px solid var(--col-one);
+        z-index: 4;
+    
+        display: flex;
+        flex-direction: column;
+        color: var(--col-one);
+        display: none;
+    }
+    .x {
+        scale: 200%;
+        margin: 5px 5px;
+    }
+    .desc {
+        height: 200px;
+    }
+    .pdeskripsi {
+        padding: 10px;
+        font-size: medium;
+    }
+    .ptitle {
+        padding: 15px;
+        font-size: large;
+    }
+    .pbeli {
+        margin: 10px;
+        padding: 10px 0px;
+        width: 100px;
+        font-size: large;
+    }
+}
+
+ @keyframes animasitombol {
+    0% {
+        scale: 100%;
+        /* padding-top: 0px; */
+    }
+    100% {
+        scale: 110%;
+        /* padding-top: 10px; */
+    }
+ }

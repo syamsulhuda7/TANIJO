@@ -91,4 +91,3 @@ x3.addEventListener('click', x => {
     popup3.classList.remove('buka');
     scroll3();
 });
-

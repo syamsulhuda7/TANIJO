@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root {
+    --col-one:rgb(0, 57, 38);
+    --col-two:rgb(252, 125, 56);
+    --col-thr:rgb(254, 219, 119);
+    --col-fou:rgb(254, 248, 236);
+}
+
+li a {
+    color: var(--col-fou);
+}
+li a:hover {
+    scale: 105%;
+    color: var(--col-thr);
+}
+
+button a {
+    padding: 15px 25px;
+    background-color: var(--col-fou);
+    border: none;
+    border-radius: 10px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    color: var(--col-one);
+    transition: .2s ease-in-out;
+}
+button a:hover {
+    background-color: var(--col-thr);
+    scale: 105%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-image: url(assets/double-bubble-outline.webp);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 100hw; */
+    /* max-width: fit-content;
+    max-height: fit-content; */
+}
+
+.humberger {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--col-one);
+    color: var(--col-fou);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    height: auto;
+    width: 100%;
+    border-bottom: 3px solid var(--col-two);
+    z-index: 5;
+}
+
+.navbar h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+.menu li {
+    list-style-type: none;
+    font-size: larger;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.menu li:hover {
+    scale: 107%;
+    color: var(--col-thr);
+}
+
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form1 {
+    border: 1px solid rgb(237, 235, 235);
+    border-radius: 3px;
+    padding: 25px;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px -3px 2px rgba(0, 0, 0, .1);
+}
+
+.form1 h1 {
+    margin-bottom: 20px;
+}
+
+.input {
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 3px;
+    padding: 10px 5px;
+    margin: 1px 0px;
+    width: 100%;
+}
+
+.login {
+    background-color: rgb(154, 203, 255);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.login:hover {
+    background-color: rgb(4, 78, 207);
+    transition: .1s ease-in-out;
+}
+
+.parentor {
+    margin: 15px 00px;
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    margin-top: 9px;
+    width: 100px;
+    height: 1px;
+    background-color: rgb(157, 157, 157);
+    justify-self: center;
+}
+
+.or {
+    padding: 0px 10px;
+    color: grey;
+}
+
+.fblogin {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.fb {
+    height: 18px;
+    margin: 0px 5px;
+}
+
+.forgot {
+    margin-top: 20px;
+    color: grey;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.forgot:hover {
+    color: black;
+    transition: .1s ease-in-out;
+}
+
+.form2 {
+    border: 1px solid rgb(237, 235, 235);
+    border-radius: 3px;
+    padding: 25px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 3px -3px 2px rgba(0, 0, 0, .1);
+}
+
+.signup {
+    color: rgb(39, 129, 255);
+    cursor: pointer;
+}
+
+.signup:hover {
+    color: blue;
+}
+
+.form3 {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form3 h4 {
+    font-weight: lighter;
+    margin: 10px 0px;
+}
+
+.app img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.app img:hover {
+    scale: 104%;
+    transition: .2s ease-in-out;
+}
+
+.bawah {
+    margin-top: 150px;
+    width: 100hw;
+    flex-wrap: wrap;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: grey;
+    cursor: pointer;
+}
+
+.bawah p:hover {
+    color: black;
+    transition: .1s ease-in-out;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--col-one);
+}
+.footer h3 {
+    padding: 20px;
+    color: var(--col-thr);
+}
+
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .navbar h1 {
+        color: yellow;
+    }
+
+    .humberger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around ;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .humberger:hover {
+        .line {
+            background-color: var(--col-thr);
+        }
+    }
+
+    .line {
+        height: 5px;
+        width: 100%;
+        background-color: var(--col-fou);
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    .menu {
+        padding-bottom:0px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        gap: 20px;
+        position: absolute;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        background-color: var(--col-two);
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+    .menu.active {
+        width: 100%;
+        height: 260px;
+        background-color: var(--col-two);
+        padding-bottom: 20px;
+    }
+    .isiprofile {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .getstarted {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 576px) {
+    .navbar h1 {
+        color: red;
+    }
+
+    .humberger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around ;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .humberger:hover {
+        .line {
+            background-color: var(--col-thr);
+        }
+    }
+
+    .line {
+        height: 5px;
+        width: 100%;
+        background-color: var(--col-fou);
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    .menu {
+        padding-bottom:0px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        gap: 20px;
+        position: absolute;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 100%;
+        height: 0px;
+        background-color: var(--col-two);
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+    .menu.active {
+        width: 100%;
+        height: 260px;
+        background-color: var(--col-two);
+        padding-bottom: 20px;
+    }
+    .sustainable {
+        color: var(--col-thr);
+        font-size: 40px;
+    }
+    .agriculture {
+        color: var(--col-fou);
+        font-size: 70px;
+    }
+    .for {
+        color: var(--col-thr);
+        font-size: 20px;
+    }
+    .better {
+        color: var(--col-fou);
+        font-size: 50px;
+    }
+    .isiproduct {
+        margin-left: 0px;
+    }
+    .sosmed img {
+        height: 100px;
+        width: auto;
+    }
+    .gambar {
+        height: 300px;
+    }
+    .shadow {
+        height: 340px;
+        top: 830px;
+        left: 30px;
+    }
+    
+    .deskripsi {
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: var(--col-th);
+        /* background-color: aqua; */
+    }
+    .block {
+        position: absolute;
+        border-radius: 10px;
+        margin-left: 0px;
+        margin-top: 17px;
+        width: 15px;
+        height: 15px;
+        background-color: var(--col-two);
+    }
+    .deskripsi h2 {
+        margin: 10px 30px;
+    }
+    .deskripsi p {
+        margin-left: 30px;
+    }
+    .isideskripsi {
+        display: flex;
+    }
+    .isideskripsi a {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 80px;
+        padding: 5px 20px;
+        border: 3px solid var(--col-one);
+        background-color: rgba(0, 57, 38, 0.114);
+        border-radius: 5px;
+        color: var(--col-one);
+        z-index: 1;
+    }
+
+
+    .texthome {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+    }
+    .sustainable {
+        font-size: 30px;
+    }
+    .agriculture {
+        font-size: 50px;
+    }
+    .for {
+        font-size: 20px;
+    }
+    .better {
+        font-size: 40px;
+    }
+
+    .popup {
+        height: 510px;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgb(254, 248, 236);
+        border-radius: 20px;
+        border: 5px solid var(--col-one);
+        z-index: 4;
+    
+        display: flex;
+        flex-direction: column;
+        color: var(--col-one);
+        display: none;
+    }
+    .x {
+        scale: 200%;
+        margin: 5px 5px;
+    }
+    .desc {
+        height: 200px;
+    }
+    .pdeskripsi {
+        padding: 10px;
+        font-size: medium;
+    }
+    .ptitle {
+        padding: 15px;
+        font-size: large;
+    }
+    .pbeli {
+        margin: 10px;
+        padding: 10px 0px;
+        width: 100px;
+        font-size: large;
+    }
+}
+
+ @keyframes animasitombol {
+    0% {
+        scale: 100%;
+        /* padding-top: 0px; */
+    }
+    100% {
+        scale: 110%;
+        /* padding-top: 10px; */
+    }
+ }
